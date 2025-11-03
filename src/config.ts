@@ -8,3 +8,7 @@ export const redis = {
       port:process.env.REDIS_PORT || "",
       password:process.env.REDIS_DEFAULT_PASSWORD || "",
 }
+
+export const caching = {
+      contentCacheDuration: process.env.CONTENT_CACHE_DURATION_MILIS || 60000
+}

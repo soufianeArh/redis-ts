@@ -4,7 +4,7 @@ export enum Status{
       DONE="DONE"
 }
 import mongoose from "mongoose";
-interface todoDoc extends mongoose.Document{
+export interface todoDoc extends mongoose.Document{
          user: mongoose.Schema.Types.ObjectId
          title: string
          description: string
