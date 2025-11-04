@@ -5,7 +5,7 @@ import {caching} from "../config"
 import {todoDoc} from "../model/todoModel"
 import { getJSON } from "./query"
 import cache from "."
-export async function createUserTodos (userId: string, todos: todoDoc[] ){
+export async function saveUserTodos (userId: string, todos: todoDoc[] ){
       const key = getUserTodoKey(userId);
       return setJSON(
             key,

@@ -1,7 +1,8 @@
 import {createClient} from "redis"
 import { redis } from "../config"
 
-const redisURL = `redis://${redis.password}@${redis.host}:${redis.port}`
+const redisURL = `redis://:${redis.password}@${redis.host}:${redis.port}`
+
 
 const client = createClient({url: redisURL});
 client.on("connect", ()=>console.log("redis connecting"))

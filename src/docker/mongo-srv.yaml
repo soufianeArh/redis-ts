@@ -1,0 +1,18 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo
+    container_name: mongodb-redis-ts
+    restart: "no"
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_redis_data:/data/db  # persistent storage
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=rorana123
+
+volumes:
+  mongo_redis_data:

@@ -12,3 +12,6 @@ export const redis = {
 export const caching = {
       contentCacheDuration: process.env.CONTENT_CACHE_DURATION_MILIS || 60000
 }
+
+export const mongo_uri = process.env.MONGO_URI || ""
+console.log(mongo_uri)
