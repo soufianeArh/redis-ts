@@ -12,14 +12,13 @@ export async function saveUserTodos (userId: string, todos: todoDoc[] ){
             {data: todos},
             new Date(Date.now() + Number(caching.contentCacheDuration))
       )
-}
-
+};
 export async function fetchUserTodos(userId: string){
       const key= getUserTodoKey(userId);
       return getJSON<todoDoc[]>(key)
-}
+};
 
 export async function invalidateUserTodos(userId: string){
       const key=getUserTodoKey(userId);
       return cache.del(key)
-}
+};
